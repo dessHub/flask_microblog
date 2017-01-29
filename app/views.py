@@ -5,8 +5,8 @@ from .forms import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {"nickname":"dess"}
-    post = [{'author':{'nickname':'creig'},'body':'its a beutifull day'},{'author':{'nickname':'ben'},'body':'Flask is awesom'}]
+    user = {"username":"dess"}
+    post = [{'author':{'username':'creig'},'body':'its a beutifull day'},{'author':{'username':'ben'},'body':'Flask is awesom'}]
     return render_template('index.html',title='Home',user=user,post=post)
 
 @app.route('/login', methods=['GET', 'POST'])
